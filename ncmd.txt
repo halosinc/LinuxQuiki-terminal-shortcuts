@@ -1,2 +1,31 @@
-# LinuxQuiki
-automative bash script to make termianl shortcuts 
+#!/bin/bash
+
+# Created by HALOSINC
+# Free to use
+
+# DESCRIPTION:
+# Script to create a shortcut to creating new commands in terminal
+
+	# TITLE
+
+echo --------------------------
+echo ------- NEW CMD ----------
+echo --------------------------
+
+	# Asks the user the command name
+
+echo 
+echo "Name of Command:"
+read input1
+
+
+	# Automatically enters the bash script to the new command
+echo "#!/bin/bash" >> /bin/$input1
+
+
+	# Opens the new command nano file
+sudo nano /bin/$input1
+
+	
+	# After the user saves the command, this make the command executable
+sudo chmod +x /bin/$input1
